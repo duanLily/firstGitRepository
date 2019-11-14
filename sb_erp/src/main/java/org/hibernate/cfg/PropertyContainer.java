@@ -39,7 +39,7 @@ import org.hibernate.internal.util.StringHelper;
 import org.jboss.logging.Logger;
 
 /*A helper class to keep the {@code XProperty}s of a class ordered by access
- * type. 保证数据库表的字段和实体类的字段顺序是一样的
+ * type. 将乱序的HashMap更改为linkedHashMap保证数据库表的字段和实体类的字段顺序是一样的
  */
 class PropertyContainer {
 	/* static { System.setProperty("jboss.i18n.generate-proxies", "true"); } */
