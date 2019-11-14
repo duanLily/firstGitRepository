@@ -20,11 +20,9 @@ import com.hqyj.erp.modules.property.constant.ApplyStatus;
 import com.hqyj.erp.modules.property.constant.ApplyType;
 import com.hqyj.erp.modules.property.constant.PropertyType;
 
-/**
- * 申请流程控制器
+/* 申请流程控制器
  * @author: HymanHu
- * @date: 2019年11月11日
- */
+ * @date: 2019年11月11日 */
 @Controller
 @RequestMapping("/flow")
 public class FlowController {
@@ -34,9 +32,7 @@ public class FlowController {
 	@Autowired
 	private AccountService accountService;
 
-	/**
-	 * 用户申请列表页面
-	 */
+	/* 用户申请列表页面 */
 	@RequestMapping("/applyListPage")
 	public String applyListPage(ModelMap modelMap) {
 		modelMap.addAttribute("user", accountService.getUserBySubject());
