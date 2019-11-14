@@ -4,22 +4,19 @@
       xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<TITLE>ERP SYSTEM</TITLE>
+		<TITLE>企业资产管理系统</TITLE>
 		<META name="description" content="ERP.COM"/>
-		
 		<!-- 引入外部js或css -->
 	    <script th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}" type="text/javascript" ></script>
-	    
 	    <!-- 引入内部js或css -->
 		<script th:src="${'/lib/layui/layui.js'}" type="text/javascript" charset="utf-8"></script>
 		<script th:src="${'/js/xadmin.js'}" type="text/javascript"></script>
 		<link th:href="${'/css/font.css'}" rel="stylesheet">
 		<link th:href="${'/css/xadmin.css'}" rel="stylesheet">
 	</head>
-	
 	<body class="login-bg">
 		<div class="login" >
-			<div class="message">企业资产管理系统-用户登录</div>
+			<div class="message">用户登录</div>
 			<font  id="error" size="10" class="text-align:center" color="red"></font>
 			<div id="darkbannerwrap"></div>
 			<form method="post" class="layui-form">

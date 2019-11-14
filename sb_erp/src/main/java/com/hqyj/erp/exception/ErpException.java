@@ -1,15 +1,13 @@
 package com.hqyj.erp.exception;
 
-/**
- * 业务相关exception
+/* 业务相关exception
  * @author: HymanHu
- * @date: 2019年11月11日
- */
+ * @date: 2019年11月11日  */
 public class ErpException extends RuntimeException {
 	private static final long serialVersionUID = 6056932528407692580L;
 	private int status;
 	private String reason;
-    private TYPE type;
+	private TYPE type;
 
 	public ErpException(String reason) {
 		super();
@@ -21,7 +19,7 @@ public class ErpException extends RuntimeException {
 		this.reason = reason;
 		this.status = status;
 	}
-	
+
 	public ErpException(String reason, Throwable cause) {
 		super(reason, cause);
 		this.reason = reason;
@@ -39,7 +37,7 @@ public class ErpException extends RuntimeException {
 		this.reason = reason;
 		this.type = type;
 	}
-	
+
 	public ErpException(int status, String reason, TYPE type, Throwable cause) {
 		super(reason, cause);
 		this.status = status;
@@ -47,7 +45,6 @@ public class ErpException extends RuntimeException {
 		this.type = type;
 	}
 
-    
 	public String getReason() {
 		return reason;
 	}
@@ -55,16 +52,16 @@ public class ErpException extends RuntimeException {
 	public int getStatus() {
 		return status;
 	}
-	
+
 	public TYPE getType() {
 		return type;
 	}
 
 	public static enum TYPE {
-		CLIENT_ERROR, //call had a 400 error
-        SERVER_ERROR, //call had a 500 error
-        ADAPTER_ERROR, //there was some kind of IO/Encoding/Adapting issue
-        NO_CONTENT, //call came back with a 204 no content response
-        UNKNOWN; //default error
+		CLIENT_ERROR, // call had a 400 error
+		SERVER_ERROR, // call had a 500 error
+		ADAPTER_ERROR, // there was some kind of IO/Encoding/Adapting issue
+		NO_CONTENT, // call came back with a 204 no content response
+		UNKNOWN; // default error
 	}
 }
